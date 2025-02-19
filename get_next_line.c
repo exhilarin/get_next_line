@@ -6,7 +6,7 @@
 /*   By: iguney <iguney@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 19:16:57 by iguney            #+#    #+#             */
-/*   Updated: 2024/12/28 16:15:03 by iguney           ###   ########.fr       */
+/*   Updated: 2025/02/19 06:59:32 by iguney           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,5 +106,10 @@ char	*get_next_line(int fd)
 		return (NULL);
 	mainline = get_mainline(putline);
 	putline = get_update(putline);
+	if (!putline || putline[0] == '\0')
+	{
+		free(putline);
+		putline = NULL;
+	}
 	return (mainline);
 }
