@@ -106,7 +106,7 @@ char	*get_next_line(int fd)
 		return (NULL);
 	mainline = get_mainline(putline);
 	putline = get_update(putline);
-	if (!putline || putline[0] == '\0')
+	if (!putline || putline[0] == '\0' || putline[0] == '\n')
 	{
 		free(putline);
 		putline = NULL;
