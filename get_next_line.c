@@ -6,7 +6,7 @@
 /*   By: iguney <iguney@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 19:16:57 by iguney            #+#    #+#             */
-/*   Updated: 2025/02/22 23:36:21 by iguney           ###   ########.fr       */
+/*   Updated: 2025/02/22 23:42:21 by iguney           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,11 +102,11 @@ char	*get_next_line(int fd)
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
 	putline = get_read(fd, putline);
-	if (!putline || putline[0] == '\n')
+	if (!putline || putline[0] == '\n' || putline[0] == '\0')
 		return (NULL);
 	mainline = get_mainline(putline);
 	putline = get_update(putline);
-	if (!putline || putline[0] == '\n')
+	if (!putline || putline[0] == '\n' || putline[0] == '\0')
 	{
 		free(putline);
 		putline = NULL;
