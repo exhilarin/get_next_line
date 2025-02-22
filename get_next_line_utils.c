@@ -6,7 +6,7 @@
 /*   By: iguney <iguney@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 19:58:27 by iguney            #+#    #+#             */
-/*   Updated: 2025/02/22 23:38:24 by iguney           ###   ########.fr       */
+/*   Updated: 2025/02/22 23:42:32 by iguney           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,6 @@ char	*ft_strjoin(char *s1, char *s2)
 	int		j;
 	char	*str;
 
-	if(s1[0] == '\n')
-	{
-		s1 = (char *)malloc(1 * sizeof(char));
-		s1[0] = '\0';
-	}
 	if (!s1)
 	{
 		s1 = (char *)malloc(1 * sizeof(char));
