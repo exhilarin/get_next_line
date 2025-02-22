@@ -102,7 +102,7 @@ char	*get_next_line(int fd)
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
 	putline = get_read(fd, putline);
-	if (!putline)
+	if (!putline || putline[0] == '\0' || putline[0] == '\n')
 		return (NULL);
 	mainline = get_mainline(putline);
 	putline = get_update(putline);
