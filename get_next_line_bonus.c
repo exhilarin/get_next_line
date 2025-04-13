@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: iguney <iguney@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ilyas-guney <ilyas-guney@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/14 17:28:38 by iguney            #+#    #+#             */
-/*   Updated: 2024/12/16 19:20:37 by iguney           ###   ########.fr       */
+/*   Updated: 2025/04/13 09:11:57 by ilyas-guney      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*get_update(char *putline)
 		free(putline);
 		return (NULL);
 	}
-	buffer = malloc(sizeof(char) * (ft_strlen(putline) - i));
+	buffer = malloc(sizeof(char) * (ft_strlen_gnl(putline) - i));
 	if (!buffer)
 		return (NULL);
 	i++;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: iguney <iguney@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ilyas-guney <ilyas-guney@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/17 17:02:36 by iguney            #+#    #+#             */
-/*   Updated: 2024/12/17 19:52:03 by iguney           ###   ########.fr       */
+/*   Updated: 2025/04/13 09:11:57 by ilyas-guney      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*get_mainline(char *putline);
 char	*get_read(int fd, char *putline);
 char	*get_next_line(int fd);
 char	*ft_strchr(const char *s, int c);
-int		ft_strlen(char *str);
+int		ft_strlen_gnl(char *str);
 char	*ft_strjoin(char *s1, char *s2);
 
 #endif
